@@ -51,7 +51,7 @@ Este repositorio contiene una configuración de Apache Superset utilizando Docke
 3. Levanta los servicios:
 
    ```bash
-   docker-compose up -d
+   docker compose up -d
    ```
 
 4. Accede a Superset desde tu navegador:
@@ -69,19 +69,19 @@ Este repositorio contiene una configuración de Apache Superset utilizando Docke
 - Ver logs en tiempo real:
 
   ```bash
-  docker-compose logs -f
+  docker compose logs -f
   ```
 
 - Reiniciar servicios:
 
   ```bash
-  docker-compose restart
+  docker compose restart
   ```
 
 - Detener y eliminar contenedores:
 
   ```bash
-  docker-compose down
+  docker compose down
   ```
 
 ---

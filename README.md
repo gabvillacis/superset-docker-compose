@@ -84,4 +84,36 @@ Este repositorio contiene una configuración de Apache Superset utilizando Docke
   docker compose down
   ```
 
+## 📊 Monitorización y Logging
+
+- **Estado de contenedores**  
+  ```bash
+  docker compose ps
+  ```  
+  Muestra nombre, estado, puertos y tiempo de ejecución de cada servicio.
+
+- **Métricas en tiempo real**  
+  ```bash
+  docker stats superset_app superset_db redis
+  ```  
+  CPU, memoria, I/O de disco y red de los contenedores especificados.
+
+- **Logs de Superset**  
+  ```bash
+  docker compose logs -f superset_app
+  ```  
+  Sigue en tiempo real los mensajes de arranque, errores y actividad de la aplicación.
+
+- **Logs de Celery (worker)**  
+  ```bash
+  docker compose logs -f superset_worker
+  ```  
+  Registra la actividad y posibles fallos de los procesos asíncronos de Superset.
+
+- **Logs de Redis y Postgres**  
+  ```bash
+  docker compose logs -f redis
+  docker compose logs -f db
+  ```  
+  Permite diagnosticar problemas de caché (Redis) o de la base de datos de metadata (Postgres).
 ---
